@@ -10,6 +10,10 @@ export const MainCard = ({
   unitSystem,
   weatherData,
 }) => {
+
+  const temp = weatherData?.current?.temperature_2m;
+  const humidity = weatherData.current.relative_humidity_2m;
+  const wind = weatherData.current.wind_speed_10m;
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.location}>
@@ -24,17 +28,11 @@ export const MainCard = ({
       />
       <h1 className={styles.temperature}>
         {unitSystem == "metric"
-          ? Math.round(weatherData.main.temp)
-          : Math.round(ctoF(weatherData.main.temp))}
+          ? Math.round(weatherData.temp)
+          : Math.round(ctoF(weatherData.temp))}
         °{unitSystem == "metric" ? "C" : "F"}
       </h1>
-      <p>
-        Feels like{" "}
-        {unitSystem == "metric"
-          ? Math.round(weatherData.main.feels_like)
-          : Math.round(ctoF(weatherData.main.feels_like))}
-        °{unitSystem == "metric" ? "C" : "F"}
-      </p>
+     
     </div>
   );
 };

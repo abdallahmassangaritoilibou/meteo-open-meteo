@@ -31,11 +31,20 @@ export const degToCompass = (num) => {
   ];
   return arr[val % 16];
 };
+// je traite le cas d'erreur pour l'heur 
+export const unixToLocalTime = (timeValue) => {
+  if (!timeValue) return "00:00";
 
-export const unixToLocalTime = (unixSeconds, timezone) => {
-  let time = new Date((unixSeconds + timezone) * 1000)
-    .toISOString()
-    .match(/(\d{2}:\d{2})/)[0];
-
-  return time.startsWith("0") ? time.substring(1) : time;
+  try {
+   
+    const date = new Date(timeValue);
+    
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    
+    return `${hours}:${minutes}`;
+  } catch (e) {
+    return "00:00";
+  }
 };
+
