@@ -1,42 +1,30 @@
-# Weather App
+# météo-open-météo
 
-Check the current weather on any city on the planet. Switch between metric and imperial units.
-
-![Alt img](https://images.ctfassets.net/zlsyc9paq6sa/3uBrJ07WSM40FpolgjInHY/7d886cb4187b52194bf9b63c183a1d3a/1627637330_x.gif)
+Affichage de la météo d'une ville dans les transports.
 
 ## Features
 
-1. User's ability to search cities
+1. Localisation: affichage, dynamique de la ville, (Nantes,FR).
 
-2. Current local time and date
+2. Données en temps réel: récupération des données via l'API Open-Méteo.
 
-3. Temperatures and humidity
+3. Affichage de la vitesse du vent actuellement 10.1 manque le km/h
 
-4. Wind speed and direction
-
-5. Sunrise and sunset times
-
-6. Metric vs Imperial system
+4. Point d'amélioration (NaN) un problème de mapping entre l'objet du json et de l'API et le composant réac enpêche, l'affichage du chiffre de la température bien que la donnée soit reçu.
+- afficher correctement la vitesse du vent actuellement: 10.1 km/h
+Afficher aussi correctement l'heure
 
 7. Error handling and loading info
 
 ## Installation
 
-1. `git clone https://github.com/madzadev/weather-app.git`
+1. `git clone https://github.com/abdallahmassangaritoilibou/meteo-open-meteo`
 
-2. `cd weather-app`
+2. `cd meteo-open-meteo`
 
 3. `npm install`
 
-4. Log-in to [Openweathermap.com](https://openweathermap.org/)
-
-5. Create an API key
-
-6. `cp .env.example .env.local`
-
-7. Paste API key for `OPENWEATHER_API_KEY`
-
-8. `npm run dev`
+4. `npm run dev`
 
 ## Contributions
 
