@@ -14,7 +14,7 @@ Affichage de la météo d'une ville dans les transports.
 - afficher correctement la vitesse du vent actuellement: 10.1 km/h
 Afficher aussi correctement l'heure
 
-7. Error handling and loading info
+5. Error handling and loading info
 
 ## Installation
 
